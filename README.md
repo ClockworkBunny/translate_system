@@ -1,9 +1,5 @@
 ## Product Title Translation System from English to Thai
-Code for the paper [Convolutional Neural Networks for Sentence Classification](http://arxiv.org/abs/1408.5882) (EMNLP 2014).
-
-Runs the model on Pang and Lee's movie review dataset (MR in the paper).
-Please cite the original paper when using the data.
-
+The data file is "Product MT - Data.excel" provided by Shopee
 ### Requirements
 Code is written in Python (2.7) and requires the following packages (only uncommon ones):
 1 mstranslator
@@ -11,22 +7,17 @@ https://pypi.python.org/pypi/mstranslator
 2 google
 https://github.com/BirdAPI/Google-Search-API
 
-In addition, a collection of seed product titles should be provided in resource\prodcut_names.txt. And to access the bing translator API, a key should be provided in the main.py file.
+In addition, a collection of seed product titles should be provided in resource\prodcut_names.txt. 
 
 
 ### Running the models
 
 ```
-python main.py 
+python main.py key
 ```
 
-where path points to the word2vec binary file (i.e. `GoogleNews-vectors-negative300.bin` file). 
-This will create a pickle object called `mr.p` in the same folder, which contains the dataset
-in the right format.
-
-Note: This will create the dataset with different fold-assignments than was used in the paper.
-You should still be getting a CV score of >81% with CNN-nonstatic model, though.
+where key is the key to access Bing translation API. In the main.py, the input corpus is used as the "sample-data" in the excel file. It will generate the translated titles in Thai and store them in the "Output.txt".
 
 
 ### Example output
-result
+result_1.txt and result_2.txt are the translated titles corresponding to 'Sample-Data' and 'Test-Data' in the excel file. 
