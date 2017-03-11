@@ -14,7 +14,6 @@ import sys
 
 if __name__=="__main__":    
 		key_user = sys.argv[1]
-		print key_user
 		def dict_mapping(word, key=key_user):
 				translator = Translator(key)
 				return translator.translate(word, lang_from='en', lang_to='th')    
